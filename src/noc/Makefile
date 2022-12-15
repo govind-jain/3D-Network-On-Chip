@@ -1,6 +1,6 @@
 CPP := g++
 OUTPUT := out
-CPPFLAGS := -I. -I./test -I./topology -DENABLE_PTHREADS=ON
+CPPFLAGS := -I. -I./test -I./topology  -DENABLE_PTHREADS=ON
 
 
 SRC := $(wildcard */*.cpp)

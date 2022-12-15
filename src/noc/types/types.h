@@ -1,15 +1,15 @@
-#include <vector>
-#include <string>
+#ifndef INC_3D_NETWORK_ON_CHIP_TYPES_H
+#define INC_3D_NETWORK_ON_CHIP_TYPES_H
 
-#ifndef TYPES_H
-#define TYPES_H
+#include <bits/stdc++.h>
+using namespace std;
 
 typedef unsigned int t_NodeId;
-typedef unsigned int t_Coordinate;
 typedef unsigned int t_Axis;
+typedef std::tuple<int,int,int> t_Coordinate;
+typedef std::vector<vector<pair<int,int>>> t_Neighbours;
 typedef std::string t_FileName;
 typedef unsigned short t_NodeType;
-typedef vector<vector<vector<char>>> t_Topology;
 
 enum t_DirectionId{
     E_Type_Switch = 0,
@@ -29,4 +29,5 @@ enum t_DirectionId{
     E_Switch_Size = 6
 };
 
-#endif
+
+#endif //INC_3D_NETWORK_ON_CHIP_TYPES_H

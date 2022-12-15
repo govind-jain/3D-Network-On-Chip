@@ -1,34 +1,33 @@
 #include "TopologyConfig.h"
-#include "IniReader.h"
-class c_Node {
-private:
-    t_NodeId l_nodeId;
 
-    t_Coordinate l_xc;
-    t_Coordinate l_yc;
-    t_Coordinate l_zc;
-    t_Axis l_axis;
-
-public:
-    int id,type;
-    c_Node(int id,int type){
-        this->id = id;
-        this->type = type;
+pair<vector<t_Coordinate>, t_Neighbours> f_Reader() {
+    int n, m;
+    cin >> n >> m;
+    vector<t_Coordinate> l_Coordinates(n);
+    t_Neighbours l_AdjacencyList(n);
+    for (int i = 0; i < n; ++i) {
+        int x, y, z, p;
+        cin >> x >> y >> z >> p;
+        tuple<int, int, int> l_Coordinate = {x, y, z};
+        l_Coordinates[p] = l_Coordinate;
     }
-};
-
-map<int, pair<int, pair<int, int>>> mp;
-vector<vector<pair<int, int>>> adj;
-
-
-void TopologyConfig:: TopologConfig(const char *file_name) {
-    pair<map<int, pair<int, pair<int, int>>>, vector<vector<pair<int, int>>>> p = f_Reader(file_name);
-    mp = p.first;
-    adj = p.second;
-
-    cout<<adj.size()<<endl;
-
+    for (int i = 0; i < m; ++i) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        l_AdjacencyList[u].push_back({v, w});
+        l_AdjacencyList[v].push_back({u, w});
+    }
+    return make_pair(l_Coordinates, l_AdjacencyList);
 }
+
+void TopologyConfig::f_SetTopology() {
+    pair<vector<t_Coordinate>, t_Neighbours> p = f_Reader();
+    g_Position = p.first;
+    g_Neighbours = p.second;
+    g_NumNodes = g_Position.size();
+    cout<<"(Debug)"<<g_NumNodes<<endl;
+}
+
 
 /*
  * void CreateTopology(){

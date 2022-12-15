@@ -1,13 +1,16 @@
-#include <bits/stdc++.h>
 #include "TopologyConfig.h"
-#define E_Type_Switch 0
+#include "Topology.h"
 using namespace std;
 
 int main() {
+    TopologyConfig* T = new TopologyConfig();
+    T->f_SetTopology();
 
-    const char* file_name = "topology.txt";
-    //freopen("topology.txt", "r", stdin);
-    TopologyConfig* t = new TopologyConfig();
-    t->TopologConfig(file_name);
+    // 4 Layers
+    int NumLayers = 4;
+    for (int i = 0; i < NumLayers; ++i) {
+        c_Topology* l_topology = new c_Topology(T);
+    }
+
     return 0;
 }
