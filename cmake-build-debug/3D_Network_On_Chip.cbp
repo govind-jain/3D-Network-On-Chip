@@ -87,10 +87,10 @@
 		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/test/main.cpp">
 			<Option target="3D_Network_On_Chip"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/IniReader.cpp">
+		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/Topology.cpp">
 			<Option target="3D_Network_On_Chip"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/IniReader.h">
+		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/Topology.h">
 			<Option target="3D_Network_On_Chip"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/TopologyConfig.cpp">

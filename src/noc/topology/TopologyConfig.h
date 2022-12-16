@@ -5,9 +5,9 @@
 
 class TopologyConfig{
 private:
-    int g_NumNodes;
-    vector<t_Coordinate> g_Position;
-    t_Neighbours g_Neighbours;
+    int m_NumNodes;
+    vector<t_Coordinate> m_Position;
+    t_Neighbours m_Neighbours;
 public:
     void f_SetTopology();
 

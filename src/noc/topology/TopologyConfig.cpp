@@ -22,10 +22,10 @@ pair<vector<t_Coordinate>, t_Neighbours> f_Reader() {
 
 void TopologyConfig::f_SetTopology() {
     pair<vector<t_Coordinate>, t_Neighbours> p = f_Reader();
-    g_Position = p.first;
-    g_Neighbours = p.second;
-    g_NumNodes = g_Position.size();
-    cout<<"(Debug)"<<g_NumNodes<<endl;
+    m_Position = p.first;
+    m_Neighbours = p.second;
+    m_NumNodes = m_Position.size();
+    cout << "(Debug)" << m_NumNodes << endl;
 }
 
 

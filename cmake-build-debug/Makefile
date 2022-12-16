@@ -153,29 +153,29 @@ src/noc/test/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.s
 .PHONY : src/noc/test/main.cpp.s
 
-src/noc/topology/IniReader.o: src/noc/topology/IniReader.cpp.o
-.PHONY : src/noc/topology/IniReader.o
+src/noc/topology/Topology.o: src/noc/topology/Topology.cpp.o
+.PHONY : src/noc/topology/Topology.o
 
 # target to build an object file
-src/noc/topology/IniReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o
-.PHONY : src/noc/topology/IniReader.cpp.o
+src/noc/topology/Topology.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o
+.PHONY : src/noc/topology/Topology.cpp.o
 
-src/noc/topology/IniReader.i: src/noc/topology/IniReader.cpp.i
-.PHONY : src/noc/topology/IniReader.i
+src/noc/topology/Topology.i: src/noc/topology/Topology.cpp.i
+.PHONY : src/noc/topology/Topology.i
 
 # target to preprocess a source file
-src/noc/topology/IniReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.i
-.PHONY : src/noc/topology/IniReader.cpp.i
+src/noc/topology/Topology.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.i
+.PHONY : src/noc/topology/Topology.cpp.i
 
-src/noc/topology/IniReader.s: src/noc/topology/IniReader.cpp.s
-.PHONY : src/noc/topology/IniReader.s
+src/noc/topology/Topology.s: src/noc/topology/Topology.cpp.s
+.PHONY : src/noc/topology/Topology.s
 
 # target to generate assembly for a file
-src/noc/topology/IniReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.s
-.PHONY : src/noc/topology/IniReader.cpp.s
+src/noc/topology/Topology.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.s
+.PHONY : src/noc/topology/Topology.cpp.s
 
 src/noc/topology/TopologyConfig.o: src/noc/topology/TopologyConfig.cpp.o
 .PHONY : src/noc/topology/TopologyConfig.o
@@ -213,9 +213,9 @@ help:
 	@echo "... src/noc/test/main.o"
 	@echo "... src/noc/test/main.i"
 	@echo "... src/noc/test/main.s"
-	@echo "... src/noc/topology/IniReader.o"
-	@echo "... src/noc/topology/IniReader.i"
-	@echo "... src/noc/topology/IniReader.s"
+	@echo "... src/noc/topology/Topology.o"
+	@echo "... src/noc/topology/Topology.i"
+	@echo "... src/noc/topology/Topology.s"
 	@echo "... src/noc/topology/TopologyConfig.o"
 	@echo "... src/noc/topology/TopologyConfig.i"
 	@echo "... src/noc/topology/TopologyConfig.s"

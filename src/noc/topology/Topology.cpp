@@ -18,7 +18,6 @@ void c_Topology::SetPosition(vector<t_Coordinate> p_Position) {
 }
 
 c_Topology::c_Topology(TopologyConfig *T) {
-    cout <<"(Debug)"<< " New Topology Created\n";
-    //TODO
+
 }
 

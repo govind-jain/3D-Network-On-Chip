@@ -83,24 +83,10 @@ CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/test/main.cpp -o CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.s
 
-CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o: CMakeFiles/3D_Network_On_Chip.dir/flags.make
-CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o: ../src/noc/topology/IniReader.cpp
-CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o: CMakeFiles/3D_Network_On_Chip.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o -MF CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o.d -o CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o -c /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/IniReader.cpp
-
-CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/IniReader.cpp > CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.i
-
-CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/IniReader.cpp -o CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.s
-
 CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o: CMakeFiles/3D_Network_On_Chip.dir/flags.make
 CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o: ../src/noc/topology/TopologyConfig.cpp
 CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o: CMakeFiles/3D_Network_On_Chip.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o -MF CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o.d -o CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o -c /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/TopologyConfig.cpp
 
 CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.i: cmake_force
@@ -111,18 +97,32 @@ CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/TopologyConfig.cpp -o CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.s
 
+CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o: CMakeFiles/3D_Network_On_Chip.dir/flags.make
+CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o: ../src/noc/topology/Topology.cpp
+CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o: CMakeFiles/3D_Network_On_Chip.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o -MF CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o.d -o CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o -c /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/Topology.cpp
+
+CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/Topology.cpp > CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.i
+
+CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/topology/Topology.cpp -o CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.s
+
 # Object files for target 3D_Network_On_Chip
 3D_Network_On_Chip_OBJECTS = \
 "CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.o" \
-"CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o" \
-"CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o"
+"CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o" \
+"CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o"
 
 # External object files for target 3D_Network_On_Chip
 3D_Network_On_Chip_EXTERNAL_OBJECTS =
 
 3D_Network_On_Chip: CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.o
-3D_Network_On_Chip: CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/IniReader.cpp.o
 3D_Network_On_Chip: CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/TopologyConfig.cpp.o
+3D_Network_On_Chip: CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o
 3D_Network_On_Chip: CMakeFiles/3D_Network_On_Chip.dir/build.make
 3D_Network_On_Chip: CMakeFiles/3D_Network_On_Chip.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable 3D_Network_On_Chip"
