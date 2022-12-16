@@ -129,6 +129,30 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/build
 .PHONY : 3D_Network_On_Chip/fast
 
+src/noc/node/node.o: src/noc/node/node.cpp.o
+.PHONY : src/noc/node/node.o
+
+# target to build an object file
+src/noc/node/node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/node/node.cpp.o
+.PHONY : src/noc/node/node.cpp.o
+
+src/noc/node/node.i: src/noc/node/node.cpp.i
+.PHONY : src/noc/node/node.i
+
+# target to preprocess a source file
+src/noc/node/node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/node/node.cpp.i
+.PHONY : src/noc/node/node.cpp.i
+
+src/noc/node/node.s: src/noc/node/node.cpp.s
+.PHONY : src/noc/node/node.s
+
+# target to generate assembly for a file
+src/noc/node/node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3D_Network_On_Chip.dir/build.make CMakeFiles/3D_Network_On_Chip.dir/src/noc/node/node.cpp.s
+.PHONY : src/noc/node/node.cpp.s
+
 src/noc/test/main.o: src/noc/test/main.cpp.o
 .PHONY : src/noc/test/main.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 3D_Network_On_Chip"
+	@echo "... src/noc/node/node.o"
+	@echo "... src/noc/node/node.i"
+	@echo "... src/noc/node/node.s"
 	@echo "... src/noc/test/main.o"
 	@echo "... src/noc/test/main.i"
 	@echo "... src/noc/test/main.s"

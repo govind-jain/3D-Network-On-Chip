@@ -10,4 +10,7 @@ add_executable(3D_Network_On_Chip
         src/noc/topology/TopologyConfig.cpp
         src/noc/topology/TopologyConfig.h
         src/noc/topology/Topology.cpp
-        src/noc/topology/Topology.h)
+        src/noc/topology/Topology.h
+        src/noc/node/node.cpp
+        src/noc/node/node.h
+        )

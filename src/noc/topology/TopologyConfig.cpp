@@ -1,10 +1,26 @@
 #include "TopologyConfig.h"
 
-pair<vector<t_Coordinate>, t_Neighbours> f_Reader() {
+void f_Swap(int &u, int &v, vector<t_Coordinate > &p_Coordinates) {
+    if (get<0>(p_Coordinates[u]) != get<0>(p_Coordinates[v])) {
+        if (get<0>(p_Coordinates[u]) > get<0>(p_Coordinates[v])) {
+            swap(u, v);
+        }
+    } else if (get<1>(p_Coordinates[u]) != get<1>(p_Coordinates[v])) {
+        if (get<1>(p_Coordinates[u]) > get<1>(p_Coordinates[v])) {
+            swap(u, v);
+        }
+    } else {
+        if (get<2>(p_Coordinates[u]) > get<2>(p_Coordinates[v])) {
+            swap(u, v);
+        }
+    }
+}
+
+pair<vector<t_Coordinate>, t_AdjacencyList> f_Reader() {
     int n, m;
     cin >> n >> m;
     vector<t_Coordinate> l_Coordinates(n);
-    t_Neighbours l_AdjacencyList(n);
+    t_AdjacencyList l_AdjacencyList(n);
     for (int i = 0; i < n; ++i) {
         int x, y, z, p;
         cin >> x >> y >> z >> p;
@@ -14,39 +30,28 @@ pair<vector<t_Coordinate>, t_Neighbours> f_Reader() {
     for (int i = 0; i < m; ++i) {
         int u, v, w;
         cin >> u >> v >> w;
+        f_Swap(u,v,l_Coordinates);
         l_AdjacencyList[u].push_back({v, w});
-        l_AdjacencyList[v].push_back({u, w});
     }
     return make_pair(l_Coordinates, l_AdjacencyList);
 }
 
 void TopologyConfig::f_SetTopology() {
-    pair<vector<t_Coordinate>, t_Neighbours> p = f_Reader();
+    pair<vector<t_Coordinate>, t_AdjacencyList> p = f_Reader();
     m_Position = p.first;
     m_Neighbours = p.second;
     m_NumNodes = m_Position.size();
     cout << "(Debug)" << m_NumNodes << endl;
 }
 
-
-/*
- * void CreateTopology(){
-    map<int, c_Node *> Switch;
-    map<int, c_Node *> Repeater;
-    for (int i = 0; i < adj.size(); ++i) {
-        if(Switch.find(i) == Switch.end()){
-            c_Node *t = new c_Node(i, E_Type_Switch);
-            Switch[i] = t;
-        }
-        for (int j = 0; j < adj[i].size(); ++j) {
-            if(Switch.find(adj[i][j].first) == Switch.end()){
-                c_Node *t = new c_Node(adj[i][j].first, E_Type_Switch);
-                Switch[adj[i][j].first] = t;
-            }
-
-        }
-    }
+t_AdjacencyList TopologyConfig::f_GetNeighbours() {
+    return m_Neighbours;
 }
 
- */
+vector<t_Coordinate> TopologyConfig::f_GetPositions() {
+    return m_Position;
+}
 
+int TopologyConfig::f_GetNumNodes() {
+    return m_NumNodes;
+}

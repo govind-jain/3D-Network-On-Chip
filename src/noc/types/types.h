@@ -2,12 +2,13 @@
 #define INC_3D_NETWORK_ON_CHIP_TYPES_H
 
 #include <bits/stdc++.h>
+#include "../node/node.h"
+
 using namespace std;
 
 typedef unsigned int t_NodeId;
-typedef unsigned int t_Axis;
-typedef std::tuple<int,int,int> t_Coordinate;
-typedef std::vector<vector<pair<int,int>>> t_Neighbours;
+//typedef int t_Axis;
+typedef std::vector<vector<pair<int,int>>> t_AdjacencyList;
 typedef std::string t_FileName;
 typedef unsigned short t_NodeType;
 
@@ -29,5 +30,10 @@ enum t_DirectionId{
     E_Switch_Size = 6
 };
 
+enum t_AxisType{
+    E_XAxis = 0,
+    E_YAxis =1,
+    E_ZAxis = 2
+};
 
 #endif //INC_3D_NETWORK_ON_CHIP_TYPES_H

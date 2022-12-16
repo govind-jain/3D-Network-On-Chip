@@ -8,4 +8,4 @@ SRC := $(wildcard */*.cpp)
 OBJ := $(wildcard $(OUTPUT)/*.o)
 
 all:
-	$(CPP) $(CPPFLAGS) $(SRC) -o $(OUTPUT)
+	$(CPP) -std=c++11 $(CPPFLAGS) $(SRC)  -o $(OUTPUT)

@@ -7,10 +7,12 @@ class TopologyConfig{
 private:
     int m_NumNodes;
     vector<t_Coordinate> m_Position;
-    t_Neighbours m_Neighbours;
+    t_AdjacencyList m_Neighbours;
 public:
     void f_SetTopology();
-
+    t_AdjacencyList f_GetNeighbours();
+    vector<t_Coordinate> f_GetPositions();
+    int f_GetNumNodes();
 };
 
 

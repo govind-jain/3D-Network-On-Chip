@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "3D_Network_On_Chip"
   "3D_Network_On_Chip.pdb"
+  "CMakeFiles/3D_Network_On_Chip.dir/src/noc/node/node.cpp.o"
+  "CMakeFiles/3D_Network_On_Chip.dir/src/noc/node/node.cpp.o.d"
   "CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.o"
   "CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.o.d"
   "CMakeFiles/3D_Network_On_Chip.dir/src/noc/topology/Topology.cpp.o"

@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/node/node.cpp">
+			<Option target="3D_Network_On_Chip"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/node/node.h">
+			<Option target="3D_Network_On_Chip"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/test/main.cpp">
 			<Option target="3D_Network_On_Chip"/>
 		</Unit>
