@@ -1,6 +1,9 @@
 #ifndef INC_3D_NETWORK_ON_CHIP_NODE_H
 #define INC_3D_NETWORK_ON_CHIP_NODE_H
 #include "../types/types.h"
+
+// TODO Put them in Types.h file without Errors.
+
 #define t_RepeaterId std::tuple<int,int,int>
 #define t_Coordinate std::tuple<int,int,int>
 #define t_Neighbours vector<c_Node*>
