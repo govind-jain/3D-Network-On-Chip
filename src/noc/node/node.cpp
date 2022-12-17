@@ -9,7 +9,7 @@ c_Node::c_Node(int id) {
 c_Node::c_Node(t_RepeaterId id) {
     this->m_RepeaterId = id;
     this->m_Type = E_Type_Repeater;
-    m_Neighbours.resize(E_Repeater_Size,NULL);
+    m_Neighbours.resize(E_Repeater_Size,nullptr);
 }
 
 void c_Node::f_SetAxis(t_Axis p_Axis) {
