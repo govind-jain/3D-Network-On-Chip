@@ -27,7 +27,7 @@ c_Topology::c_Topology(TopologyConfig *T) {
     this->m_NumNodes = T->f_GetNumNodes();
     vector<c_Node *> l_Address(m_NumNodes);
     for (int i = 0; i < m_NumNodes; ++i) {
-        c_Node *l_Node = new c_Node(i, E_Type_Switch);
+        c_Node *l_Node = new c_Node(i);
         l_Address[i] = l_Node;
     }
     SetAddress(l_Address);
@@ -44,7 +44,7 @@ c_Topology::c_Topology(TopologyConfig *T) {
             c_Node *o_PrevNode = m_Address[l_SrcSwitch];
             for (int k = 0; k < l_NumRepeaters; ++k) {
                 t_RepeaterId m_RepeaterId = {l_SrcSwitch, l_DestSwitch, k};
-                c_Node *o_Repeater = new c_Node(m_RepeaterId, E_Type_Repeater);
+                c_Node *o_Repeater = new c_Node(m_RepeaterId);
                 o_Repeater->f_SetAxis(l_Axis);
                 o_Repeater->f_SetNeighbour(E_Prev, o_PrevNode);
                 if (o_PrevNode->f_GetType() == E_Type_Switch) {
@@ -53,6 +53,11 @@ c_Topology::c_Topology(TopologyConfig *T) {
                     o_PrevNode->f_SetNeighbour(E_Next, o_Repeater);
                 }
                 o_PrevNode = o_Repeater;
+            }
+            if (o_PrevNode->f_GetType() == E_Type_Switch) {
+                o_PrevNode->f_SetNeighbour(l_Axis * 2, m_Address[l_DestSwitch]);
+            } else {
+                o_PrevNode->f_SetNeighbour(E_Next, m_Address[l_DestSwitch]);
             }
             m_Address[l_DestSwitch]->f_SetNeighbour(l_Axis * 2 + 1, o_PrevNode);
         }

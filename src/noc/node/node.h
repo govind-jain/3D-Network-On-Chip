@@ -21,8 +21,8 @@ private:
     t_Axis m_Axis;
     t_Neighbours m_Neighbours;
 public:
-    c_Node(int id,int type);
-    c_Node(tuple<int,int,int> id,int type);
+    c_Node(int id);
+    c_Node(t_RepeaterId id);
     void f_SetAxis(t_Axis p_Axis);
     void f_SetNeighbour(int p_Index,c_Node* p_Neighbour);
     int f_GetType() const;

@@ -1,15 +1,15 @@
 #include "node.h"
 
-c_Node::c_Node(int id, int type) {
+c_Node::c_Node(int id) {
     this->m_SwitchId = id;
-    this->m_Type = type;
-    m_Neighbours.resize(E_Switch_Size);
+    this->m_Type = E_Type_Switch;
+    m_Neighbours.resize(E_Switch_Size,nullptr);
 }
 
-c_Node::c_Node(t_RepeaterId id, int type) {
+c_Node::c_Node(t_RepeaterId id) {
     this->m_RepeaterId = id;
-    this->m_Type = type;
-    m_Neighbours.resize(E_Repeater_Size);
+    this->m_Type = E_Type_Repeater;
+    m_Neighbours.resize(E_Repeater_Size,NULL);
 }
 
 void c_Node::f_SetAxis(t_Axis p_Axis) {
