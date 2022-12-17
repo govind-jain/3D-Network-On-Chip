@@ -12,6 +12,8 @@ typedef std::vector<vector<pair<int,int>>> t_AdjacencyList;
 typedef std::string t_FileName;
 typedef unsigned short t_NodeType;
 
+// Does the name t_DirectionId matters or should we
+// make a different enum to store E_Type and E_Size
 enum t_DirectionId{
     E_Type_Switch = 0,
     E_Type_Repeater = 1,

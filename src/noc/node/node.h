@@ -10,6 +10,8 @@
 #define t_Axis int
 
 using namespace std;
+
+// We were supposed to use something like union
 class c_Node {
 private:
     int m_SwitchId;
@@ -21,6 +23,7 @@ private:
     t_Axis m_Axis;
     t_Neighbours m_Neighbours;
 public:
+    // We should replace datatypes with coded ones
     c_Node(int id,int type);
     c_Node(tuple<int,int,int> id,int type);
     void f_SetAxis(t_Axis p_Axis);

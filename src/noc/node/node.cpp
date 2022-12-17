@@ -1,5 +1,7 @@
 #include "node.h"
 
+// As switch and repeater have different type of id's
+// it is not required to pass the type as a parameter
 c_Node::c_Node(int id, int type) {
     this->m_SwitchId = id;
     this->m_Type = type;
