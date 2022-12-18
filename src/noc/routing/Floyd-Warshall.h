@@ -7,6 +7,11 @@
 using namespace std;
 #define INF 100000000
 
-vector<vector<int>> f_GetRoutingTable(t_AdjacencyList p_AdjacencyList);
+class FloydWarshall{
+public:
+    vector<vector<int>> static f_GetRoutingTable(t_AdjacencyList p_AdjacencyList);
+};
+
+
 
 #endif //INC_3D_NETWORK_ON_CHIP_FLOYD_WARSHALL_H

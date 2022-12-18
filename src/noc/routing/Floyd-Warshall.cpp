@@ -1,5 +1,5 @@
 #include "Floyd-Warshall.h"
-vector<vector<int>> f_GetRoutingTable(t_AdjacencyList &p_AdjacencyList) {
+vector<vector<int>> FloydWarshall::f_GetRoutingTable(t_AdjacencyList p_AdjacencyList) {
     int n = p_AdjacencyList.size();
     vector<vector<int>> l_ShortestDistance(n, vector<int>(n, INF));
     for (int i = 0; i < n; ++i) {
