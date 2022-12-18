@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "3D_Network_On_Chip"
   "3D_Network_On_Chip.pdb"
+  "CMakeFiles/3D_Network_On_Chip.dir/src/noc/Routing/Floyd-Warshall.cpp.o"
+  "CMakeFiles/3D_Network_On_Chip.dir/src/noc/Routing/Floyd-Warshall.cpp.o.d"
+  "CMakeFiles/3D_Network_On_Chip.dir/src/noc/Routing/Routing.cpp.o"
+  "CMakeFiles/3D_Network_On_Chip.dir/src/noc/Routing/Routing.cpp.o.d"
   "CMakeFiles/3D_Network_On_Chip.dir/src/noc/node/node.cpp.o"
   "CMakeFiles/3D_Network_On_Chip.dir/src/noc/node/node.cpp.o.d"
   "CMakeFiles/3D_Network_On_Chip.dir/src/noc/test/main.cpp.o"

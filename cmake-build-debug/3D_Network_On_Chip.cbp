@@ -84,6 +84,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/Routing/Floyd-Warshall.cpp">
+			<Option target="3D_Network_On_Chip"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/Routing/Routing.cpp">
+			<Option target="3D_Network_On_Chip"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/Routing/Routing.h">
+			<Option target="3D_Network_On_Chip"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/chund/OneDrive/Desktop/3D-Network-On-Chip/src/noc/node/node.cpp">
 			<Option target="3D_Network_On_Chip"/>
 		</Unit>

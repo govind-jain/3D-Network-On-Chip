@@ -38,4 +38,9 @@ enum t_AxisType{
     E_ZAxis = 2
 };
 
+enum t_RoutingAlgorithm{
+    E_FloydWarshall = 1
+
+};
+
 #endif //INC_3D_NETWORK_ON_CHIP_TYPES_H

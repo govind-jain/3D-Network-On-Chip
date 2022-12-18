@@ -13,4 +13,7 @@ add_executable(3D_Network_On_Chip
         src/noc/topology/Topology.h
         src/noc/node/node.cpp
         src/noc/node/node.h
+        src/noc/Routing/Floyd-Warshall.cpp
+        src/noc/Routing/Routing.cpp
+        src/noc/Routing/Routing.h
         )
