@@ -12,13 +12,13 @@
 using namespace std;
 class c_Node {
 private:
-    int m_SwitchId;
+    int m_SwitchId{};
     t_RepeaterId m_RepeaterId;
     int m_Type;
     t_Coordinate m_Xc;
     t_Coordinate m_Yc;
     t_Coordinate m_Zc;
-    t_Axis m_Axis;
+    t_Axis m_Axis{};
     t_Neighbours m_Neighbours;
 public:
     c_Node(int id);
