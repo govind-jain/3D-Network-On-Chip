@@ -31,6 +31,8 @@ enum t_AxisTypes{
 };
 
 enum t_DirectionIndices{
+    E_NotDefined = -1,
+
     E_Prev = 0,
     E_Next = 1,
 
