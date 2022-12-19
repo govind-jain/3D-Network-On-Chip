@@ -21,6 +21,7 @@ enum t_DirectionId{
     E_Prev = 0,
     E_Next = 1,
 
+    E_NotDefined = -1,
     E_East=0,
     E_West=1,
     E_North = 2,
