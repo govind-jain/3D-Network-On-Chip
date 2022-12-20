@@ -17,8 +17,10 @@ class c_ShortestPathRouting : virtual public c_Topology, virtual public c_Routin
         t_Distance f_FindDistanceBetweenSwitches(t_SwitchId p_SwitchId1, t_SwitchId p_SwitchId2);
         void f_SetAdjacencyMatrix();
         t_AdjacencyMatrix f_GetAllPairsShortestPath();
+        t_DirectionIndex f_GetDirectionOfNeighbour(t_SwitchId p_SrcSwitch, t_SwitchId p_DestSwitch);
 
     public:
+        void f_SetRoutingTables();
 
 };
 

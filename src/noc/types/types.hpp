@@ -17,6 +17,9 @@ typedef std::tuple<int,int,int> t_RepeaterId;
 typedef int t_Axis;
 typedef int t_DirectionIndex;
 typedef int t_RoutingAlgo;
+typedef vector<vector<t_DirectionIndex>> t_SwitchRoutingTable;
+//typedef vector<unordered_map<t_RepeaterId, t_DirectionIndex>> t_RepeaterRoutingTable;
+typedef unordered_map<t_RepeaterId, vector<t_DirectionIndex>> t_RepeaterRoutingTable;
 
 enum t_NodeProperties{
     E_Type_Switch = 0,
