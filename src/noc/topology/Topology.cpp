@@ -4,8 +4,8 @@ void c_Topology::f_SetNumberOfNodes(int p_NumberOfNodes){
     this->m_NumberOfNodes = p_NumberOfNodes;
 }
 
-void c_Topology::f_SetCoordinatesList(vector<t_Coordinates> p_CoordinatesList){
-    this->m_CoordinatesList = p_CoordinatesList;
+void c_Topology::f_SetAdjacencyList(t_AdjacencyList p_AdjacencyList) {
+    this->m_AdjacencyList = p_AdjacencyList;
 }
 
 void c_Topology::f_SetListOfNodePointers() {
@@ -17,11 +17,21 @@ void c_Topology::f_SetListOfNodePointers() {
     }
 }
 
+void c_Topology::f_SetCoordinatesOfNodePointers(vector<t_Coordinates> p_CoordinatesList){
+    for (int l_Counter = 0; l_Counter < this->m_NumberOfNodes; ++l_Counter) {
+        this->m_ListOfNodePointers[l_Counter]->f_SetCoordinates(p_CoordinatesList[l_Counter]);
+    }
+}
+
 t_Axis c_Topology::f_GetAxisOfDifference(t_SwitchId p_SwitchId1, t_SwitchId p_SwitchId2) {
-    if (get<0>(this->m_CoordinatesList[p_SwitchId1]) != get<0>(this->m_CoordinatesList[p_SwitchId2])) {
+
+    t_Coordinates l_CoordinatesSwitch1 = this->m_ListOfNodePointers[p_SwitchId1]->f_GetCoordinates();
+    t_Coordinates l_CoordinatesSwitch2 = this->m_ListOfNodePointers[p_SwitchId2]->f_GetCoordinates();
+
+    if (get<0>(l_CoordinatesSwitch1) != get<0>(l_CoordinatesSwitch2)) {
         return E_XAxis;
     }
-    else if (get<1>(this->m_CoordinatesList[p_SwitchId1]) != get<1>(this->m_CoordinatesList[p_SwitchId2])) {
+    else if (get<1>(l_CoordinatesSwitch1) != get<1>(l_CoordinatesSwitch2)) {
         return E_YAxis;
     }
     else{
@@ -42,9 +52,9 @@ void c_Topology::f_SetConnections(t_AdjacencyList p_AdjacencyList){
 
             c_Node *o_PrevNode = m_ListOfNodePointers[l_SrcSwitchId];
 
-            for (int k = 0; k < l_NumberOfIntermediateRepeaters; ++k) {
+            for (int l_RepeaterCounter = 0; l_RepeaterCounter < l_NumberOfIntermediateRepeaters; ++l_RepeaterCounter) {
 
-                t_RepeaterId m_RepeaterId = {l_SrcSwitchId, l_DestSwitchId, k};
+                t_RepeaterId m_RepeaterId = {l_SrcSwitchId, l_DestSwitchId, l_RepeaterCounter};
                 c_Node *o_Repeater = new c_Node(m_RepeaterId);
 
                 o_Repeater->f_SetAxis(l_AxisOfDifference);
@@ -73,8 +83,9 @@ void c_Topology::f_SetConnections(t_AdjacencyList p_AdjacencyList){
 c_Topology::c_Topology(TopologyConfig *p_TopologyConfig) {
 
     f_SetNumberOfNodes(p_TopologyConfig->f_GetNumberOfNodes());
-    f_SetCoordinatesList(p_TopologyConfig->f_GetCoordinatesList());
+    f_SetAdjacencyList(p_TopologyConfig->f_GetAdjacencyList());
     f_SetListOfNodePointers();
+    f_SetCoordinatesOfNodePointers(p_TopologyConfig->f_GetCoordinatesList());
     f_SetConnections(p_TopologyConfig->f_GetAdjacencyList());
 
     cout << "(Debug) " << "Object Created Successfully\n";

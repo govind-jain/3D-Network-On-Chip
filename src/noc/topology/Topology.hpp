@@ -8,16 +8,17 @@
 
 using namespace std;
 
-class c_Topology{
+class c_Topology : virtual public c_Node{
 
 private:
     int m_NumberOfNodes;
-    vector<t_Coordinates> m_CoordinatesList;
+    t_AdjacencyList m_AdjacencyList;
     vector<c_Node*> m_ListOfNodePointers;
 
     void f_SetNumberOfNodes(int p_NumberOfNodes);
-    void f_SetCoordinatesList(vector<t_Coordinates> p_CoordinatesList);
+    void f_SetAdjacencyList(t_AdjacencyList p_AdjacencyList);
     void f_SetListOfNodePointers();
+    void f_SetCoordinatesOfNodePointers(vector<t_Coordinates> p_CoordinatesList);
     t_Axis f_GetAxisOfDifference(t_SwitchId p_SwitchId1, t_SwitchId p_SwitchId2);
     void f_SetConnections(t_AdjacencyList p_AdjacencyList);
 
