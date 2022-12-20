@@ -45,7 +45,7 @@ tuple<int, vector<t_Coordinates>, t_AdjacencyList> f_Reader() {
     return make_tuple(l_NumberOfNodes, l_CoordinatesList, l_AdjacencyList);
 }
 
-void TopologyConfig::f_SetTopologyFromInput() {
+void c_TopologyConfig::f_SetTopologyFromInput() {
 
     tuple<int, vector<t_Coordinates>, t_AdjacencyList> l_InputReadings = f_Reader();
 
@@ -56,14 +56,14 @@ void TopologyConfig::f_SetTopologyFromInput() {
     cout << "(Debug)" << m_NumberOfNodes << endl;
 }
 
-t_AdjacencyList TopologyConfig::f_GetAdjacencyList() {
+t_AdjacencyList c_TopologyConfig::f_GetAdjacencyList() {
     return m_AdjacencyList;
 }
 
-vector<t_Coordinates> TopologyConfig::f_GetCoordinatesList() {
+vector<t_Coordinates> c_TopologyConfig::f_GetCoordinatesList() {
     return m_CoordinatesList;
 }
 
-int TopologyConfig::f_GetNumberOfNodes() {
+int c_TopologyConfig::f_GetNumberOfNodes() {
     return m_NumberOfNodes;
 }

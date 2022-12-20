@@ -4,7 +4,7 @@
 #include "../types/types.hpp"
 #include <bits/stdc++.h>
 
-class TopologyConfig{
+class c_TopologyConfig{
 private:
     int m_NumberOfNodes;
     vector<t_Coordinates> m_CoordinatesList;

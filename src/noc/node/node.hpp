@@ -16,7 +16,6 @@ private:
     t_Axis m_Axis;
     t_Neighbours m_Neighbours;
 public:
-    c_Node();
     c_Node(t_SwitchId p_SwitchId);
     c_Node(t_RepeaterId p_RepeaterId);
     void f_SetCoordinates(t_Coordinates p_Coordinates);

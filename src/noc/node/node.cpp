@@ -1,9 +1,5 @@
 #include "node.hpp"
 
-c_Node::c_Node() {
-
-}
-
 c_Node::c_Node(t_SwitchId p_SwitchId) {
     this->m_SwitchId = p_SwitchId;
     this->m_Type = E_Type_Switch;

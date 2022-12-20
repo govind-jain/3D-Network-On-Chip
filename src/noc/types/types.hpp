@@ -6,7 +6,9 @@
 using namespace std;
 
 typedef std::string t_FileName;
-typedef std::vector<vector<pair<int,int>>> t_AdjacencyList;
+typedef std::vector<list<pair<int,int>>> t_AdjacencyList;
+typedef double t_Distance;
+typedef std::vector<vector<t_Distance>> t_AdjacencyMatrix;
 typedef short t_NodeType;
 typedef int t_SwitchId;
 typedef int t_Coordinate;

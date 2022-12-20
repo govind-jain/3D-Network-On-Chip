@@ -39,14 +39,14 @@ t_Axis c_Topology::f_GetAxisOfDifference(t_SwitchId p_SwitchId1, t_SwitchId p_Sw
     }
 }
 
-void c_Topology::f_SetConnections(t_AdjacencyList p_AdjacencyList){
+void c_Topology::f_SetConnections(){
 
     for (t_SwitchId l_SrcSwitchId = 0; l_SrcSwitchId < this->m_NumberOfNodes; ++l_SrcSwitchId) {
-        for (auto l_NeighbourOfSrcSwitch: p_AdjacencyList[l_SrcSwitchId]) {
+        for (auto l_NeighbourOfSrcSwitch: this->m_AdjacencyList[l_SrcSwitchId]) {
 
-            int l_DestSwitchId = l_NeighbourOfSrcSwitch.first;
+            t_SwitchId l_DestSwitchId = l_NeighbourOfSrcSwitch.first;
             int l_NumberOfIntermediateRepeaters = l_NeighbourOfSrcSwitch.second;
-            int l_AxisOfDifference = this->f_GetAxisOfDifference(l_SrcSwitchId, l_DestSwitchId);
+            t_Axis l_AxisOfDifference = this->f_GetAxisOfDifference(l_SrcSwitchId, l_DestSwitchId);
 
             cout << "(Debug) " << l_SrcSwitchId << " " << l_DestSwitchId << endl;
 
@@ -62,9 +62,11 @@ void c_Topology::f_SetConnections(t_AdjacencyList p_AdjacencyList){
 
                 if (o_PrevNode->f_GetNodeType() == E_Type_Switch) {
                     o_PrevNode->f_SetNeighbour(l_AxisOfDifference * 2, o_Repeater);
-                } else {
+                }
+                else {
                     o_PrevNode->f_SetNeighbour(E_Next, o_Repeater);
                 }
+
                 o_PrevNode = o_Repeater;
             }
 
@@ -80,13 +82,13 @@ void c_Topology::f_SetConnections(t_AdjacencyList p_AdjacencyList){
     }
 }
 
-c_Topology::c_Topology(TopologyConfig *p_TopologyConfig) {
+c_Topology::c_Topology(c_TopologyConfig *p_TopologyConfig) {
 
     f_SetNumberOfNodes(p_TopologyConfig->f_GetNumberOfNodes());
     f_SetAdjacencyList(p_TopologyConfig->f_GetAdjacencyList());
     f_SetListOfNodePointers();
     f_SetCoordinatesOfNodePointers(p_TopologyConfig->f_GetCoordinatesList());
-    f_SetConnections(p_TopologyConfig->f_GetAdjacencyList());
+    f_SetConnections();
 
     cout << "(Debug) " << "Object Created Successfully\n";
 }

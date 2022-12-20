@@ -8,22 +8,23 @@
 
 using namespace std;
 
-class c_Topology : virtual public c_Node{
+class c_Topology {
 
-private:
+protected:
     int m_NumberOfNodes;
     t_AdjacencyList m_AdjacencyList;
     vector<c_Node*> m_ListOfNodePointers;
 
+private:
     void f_SetNumberOfNodes(int p_NumberOfNodes);
     void f_SetAdjacencyList(t_AdjacencyList p_AdjacencyList);
     void f_SetListOfNodePointers();
     void f_SetCoordinatesOfNodePointers(vector<t_Coordinates> p_CoordinatesList);
     t_Axis f_GetAxisOfDifference(t_SwitchId p_SwitchId1, t_SwitchId p_SwitchId2);
-    void f_SetConnections(t_AdjacencyList p_AdjacencyList);
+    void f_SetConnections();
 
 public:
-    explicit c_Topology(TopologyConfig *T);
+    explicit c_Topology(c_TopologyConfig *T);
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_TOPOLOGY_HPP
