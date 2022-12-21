@@ -23,6 +23,9 @@ public:
     void f_SetNeighbour(t_DirectionIndex p_DirectionIndex, c_Node* p_Neighbour);
     t_NodeType f_GetNodeType() const;
     t_Coordinates f_GetCoordinates();
+    t_SwitchId f_GetSwitchId();
+    t_RepeaterId f_GetRepeaterId();
+    c_Node* f_GetNeighbour(t_DirectionIndex p_DirectionIndex);
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_NODE_HPP

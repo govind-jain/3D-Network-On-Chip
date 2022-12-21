@@ -31,3 +31,15 @@ t_NodeType c_Node::f_GetNodeType() const {
 t_Coordinates c_Node::f_GetCoordinates() {
     return this->m_Coordinates;
 }
+
+t_SwitchId c_Node::f_GetSwitchId(){
+    return this->m_SwitchId;
+}
+
+t_RepeaterId c_Node::f_GetRepeaterId(){
+    return this->m_RepeaterId;
+}
+
+c_Node* c_Node::f_GetNeighbour(t_DirectionIndex p_DirectionIndex){
+    return this->m_Neighbours[p_DirectionIndex];
+}

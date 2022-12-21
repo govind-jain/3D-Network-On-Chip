@@ -19,9 +19,11 @@ class c_ShortestPathRouting : virtual public c_Topology, virtual public c_Routin
         t_AdjacencyMatrix f_GetAllPairsShortestPath();
         t_DirectionIndex f_GetDirectionOfNeighbour(t_SwitchId p_SrcSwitch, t_SwitchId p_DestSwitch);
 
-    public:
+    protected:
         void f_SetRoutingTables();
 
+    public:
+        c_ShortestPathRouting();
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_SHORTEST_PATH_ROUTING_H

@@ -24,7 +24,8 @@ private:
     void f_SetConnections();
 
 public:
-    explicit c_Topology(c_TopologyConfig *T);
+    void f_SetTopology(c_TopologyConfig *T);
+    c_Topology();
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_TOPOLOGY_HPP

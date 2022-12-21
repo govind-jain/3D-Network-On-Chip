@@ -1,19 +1,27 @@
-#include "TopologyConfig.h"
-#include "Topology.h"
-#include "../routing/Routing.h"
+#include "TopologyConfig.hpp"
+#include "../routing/Routing.hpp"
 using namespace std;
 
 int main() {
-    TopologyConfig* T = new TopologyConfig();
-    T->f_SetTopology();
+    c_TopologyConfig* T = new c_TopologyConfig();
+    cout<<"Building Topology"<<endl;
+    T->f_SetTopologyFromInput();
+    cout<<"Built Topology"<<endl;
 
     // 5 Layers
-    int NumLayers = 5;
-    for (int i = 0; i < NumLayers; ++i) {
-        c_Topology* l_topology = new c_Topology(T);
-    }
-    Routing *R = new Routing(E_FloydWarshall, T);
+//    int NumLayers = 5;
+//    for (int i = 0; i < NumLayers; ++i) {
+//        c_Topology* l_topology = new c_Topology(T);
+//    }
 
+    cout<<"Building Routing Tables"<<endl;
+    c_Routing *R = new c_Routing(E_ShortestPathRouting, T);
+    cout<<"Built Routing Tables"<<endl;
+
+    cout<<"Print Routing Path"<<endl;
+    R->f_GetRoutingPath(0, 5);
+    R->f_GetRoutingPath(5, 0);
+    cout<<"Printed Routing Path"<<endl;
 
     return 0;
 }

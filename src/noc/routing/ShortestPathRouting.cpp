@@ -80,6 +80,7 @@ t_DirectionIndex c_ShortestPathRouting::f_GetDirectionOfNeighbour(t_SwitchId p_S
 void c_ShortestPathRouting::f_SetRoutingTables(){
 
     this->m_SwitchRoutingTable.resize(this->m_NumberOfNodes, vector<t_DirectionIndex>(this->m_NumberOfNodes, E_NotDefined));
+    this->f_SetAdjacencyMatrix();
 
     t_AdjacencyMatrix l_AllPairsShortestPath = this->f_GetAllPairsShortestPath();
 
@@ -106,4 +107,8 @@ void c_ShortestPathRouting::f_SetRoutingTables(){
             }
         }
     }
+}
+
+c_ShortestPathRouting::c_ShortestPathRouting() {
+
 }

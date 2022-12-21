@@ -82,7 +82,7 @@ void c_Topology::f_SetConnections(){
     }
 }
 
-c_Topology::c_Topology(c_TopologyConfig *p_TopologyConfig) {
+void c_Topology::f_SetTopology(c_TopologyConfig *p_TopologyConfig) {
 
     f_SetNumberOfNodes(p_TopologyConfig->f_GetNumberOfNodes());
     f_SetAdjacencyList(p_TopologyConfig->f_GetAdjacencyList());
@@ -91,5 +91,9 @@ c_Topology::c_Topology(c_TopologyConfig *p_TopologyConfig) {
     f_SetConnections();
 
     cout << "(Debug) " << "Object Created Successfully\n";
+}
+
+c_Topology::c_Topology() {
+
 }
 

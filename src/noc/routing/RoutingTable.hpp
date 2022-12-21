@@ -8,10 +8,10 @@ using namespace std;
 
 class c_RoutingTable {
     protected:
-        vector<vector<t_DirectionIndex>> m_SwitchRoutingTable;
-        vector<unordered_map<t_RepeaterId, t_DirectionIndex>> m_RepeaterRoutingTable;
+        t_SwitchRoutingTable m_SwitchRoutingTable;
+//        t_RepeaterRoutingTable m_RepeaterRoutingTable;
     public:
-        t_DirectionIndex f_GetNextRoutingStep(t_RepeaterId p_SrcRepeaterId, t_SwitchId p_DestSwitchId);
+//        t_DirectionIndex f_GetNextRoutingStep(t_RepeaterId p_SrcRepeaterId, t_SwitchId p_DestSwitchId);
         t_DirectionIndex f_GetNextRoutingStep(t_SwitchId p_SrcSwitchId, t_SwitchId p_DestSwitchId);
 };
 
