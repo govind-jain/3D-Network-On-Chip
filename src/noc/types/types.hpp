@@ -7,6 +7,7 @@ using namespace std;
 
 typedef std::string t_FileName;
 typedef std::vector<list<pair<int,int>>> t_AdjacencyList;
+typedef std::list<pair<int,int>> t_AdjacencyListOfSwitch;
 typedef double t_Distance;
 typedef std::vector<vector<t_Distance>> t_AdjacencyMatrix;
 typedef short t_NodeType;
@@ -17,9 +18,7 @@ typedef std::tuple<int,int,int> t_RepeaterId;
 typedef int t_Axis;
 typedef int t_DirectionIndex;
 typedef int t_RoutingAlgo;
-typedef vector<vector<t_DirectionIndex>> t_SwitchRoutingTable;
-//typedef vector<unordered_map<t_RepeaterId, t_DirectionIndex>> t_RepeaterRoutingTable;
-typedef unordered_map<t_RepeaterId, vector<t_DirectionIndex>> t_RepeaterRoutingTable;
+typedef vector<vector<t_DirectionIndex>> t_RoutingTable;
 
 enum t_NodeProperties{
     E_Type_Switch = 0,

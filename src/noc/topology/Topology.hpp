@@ -10,22 +10,23 @@ using namespace std;
 
 class c_Topology {
 
-protected:
-    int m_NumberOfNodes;
-    t_AdjacencyList m_AdjacencyList;
-    vector<c_Node*> m_ListOfNodePointers;
-
 private:
-    void f_SetNumberOfNodes(int p_NumberOfNodes);
+    int m_NumberOfSwitches;
+    t_AdjacencyList m_AdjacencyList;
+    vector<c_Node*> m_ListOfSwitchPointers;
+
+    void f_SetNumberOfSwitches(int p_NumberOfSwitches);
     void f_SetAdjacencyList(t_AdjacencyList p_AdjacencyList);
-    void f_SetListOfNodePointers();
-    void f_SetCoordinatesOfNodePointers(vector<t_Coordinates> p_CoordinatesList);
-    t_Axis f_GetAxisOfDifference(t_SwitchId p_SwitchId1, t_SwitchId p_SwitchId2);
+    void f_SetListOfSwitchPointers();
+    void f_SetCoordinatesOfSwitches(vector<t_Coordinates> p_CoordinatesList);
+    t_Axis f_GetAxisOfDifferenceOfSwitches(t_SwitchId p_SwitchId1, t_SwitchId p_SwitchId2);
     void f_SetConnections();
 
 public:
-    void f_SetTopology(c_TopologyConfig *T);
-    c_Topology();
+    c_Topology(c_TopologyConfig *T);
+    int f_GetNumberOfSwitches();
+    c_Node* f_GetSwitchPointer(t_SwitchId p_SwitchId);
+    t_AdjacencyListOfSwitch f_AdjacencyListOfSwitch(t_SwitchId p_SwitchId);
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_TOPOLOGY_HPP

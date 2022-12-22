@@ -1,5 +1,6 @@
 #include "TopologyConfig.hpp"
 #include "../routing/Routing.hpp"
+#include "../routing/ShortestPathRouting.hpp"
 using namespace std;
 
 int main() {
@@ -15,7 +16,7 @@ int main() {
 //    }
 
     cout<<"Building Routing Tables"<<endl;
-    c_Routing *R = new c_Routing(E_ShortestPathRouting, T);
+    c_Routing *R = new c_ShortestPathRouting(T);
     cout<<"Built Routing Tables"<<endl;
 
     cout<<"Print Routing Path"<<endl;

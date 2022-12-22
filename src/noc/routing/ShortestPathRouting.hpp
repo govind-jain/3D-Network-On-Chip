@@ -2,14 +2,13 @@
 #define INC_3D_NETWORK_ON_CHIP_SHORTEST_PATH_ROUTING_H
 
 #include "../types/types.hpp"
-#include "../topology/Topology.hpp"
-#include "RoutingTable.hpp"
+#include "Routing.hpp"
 #include <bits/stdc++.h>
 
 using namespace std;
 #define INF 100000000
 
-class c_ShortestPathRouting : virtual public c_Topology, virtual public c_RoutingTable{
+class c_ShortestPathRouting : virtual public c_Routing{
 
     private:
         t_AdjacencyMatrix m_AdjacencyMatrix;
@@ -18,12 +17,10 @@ class c_ShortestPathRouting : virtual public c_Topology, virtual public c_Routin
         void f_SetAdjacencyMatrix();
         t_AdjacencyMatrix f_GetAllPairsShortestPath();
         t_DirectionIndex f_GetDirectionOfNeighbour(t_SwitchId p_SrcSwitch, t_SwitchId p_DestSwitch);
-
-    protected:
         void f_SetRoutingTables();
 
     public:
-        c_ShortestPathRouting();
+        c_ShortestPathRouting(c_TopologyConfig *p_TopologyConfig);
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_SHORTEST_PATH_ROUTING_H

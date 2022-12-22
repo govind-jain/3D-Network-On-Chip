@@ -1,12 +1,8 @@
 #include "Routing.hpp"
 using namespace std;
 
-c_Routing::c_Routing(t_RoutingAlgo p_RoutingAlgo, c_TopologyConfig *p_TopologyConfig) {
-    if (p_RoutingAlgo == E_ShortestPathRouting) {
-        this->m_RoutingAlgo = E_ShortestPathRouting;
-        this->f_SetTopology(p_TopologyConfig);
-        this->f_SetRoutingTables();
-    }
+c_Routing::c_Routing(c_TopologyConfig *p_TopologyConfig) {
+    this->m_Topology = new c_Topology(p_TopologyConfig);
 }
 
 void inline f_PrintRepeaterId(t_RepeaterId p_RepeaterId){
@@ -17,10 +13,10 @@ void c_Routing::f_GetRoutingPath(t_SwitchId p_SrcSwitchId, t_SwitchId p_DestSwit
 
     while(p_SrcSwitchId != p_DestSwitchId){
 
-        t_DirectionIndex l_NextStepForSwitch = m_SwitchRoutingTable[p_SrcSwitchId][p_DestSwitchId];
+        t_DirectionIndex l_NextStepForSwitch = this->m_RoutingTable[p_SrcSwitchId][p_DestSwitchId];
         t_DirectionIndex l_NextStepForRepeater = (l_NextStepForSwitch%2 == 0)?E_Next:E_Prev;
 
-        c_Node *l_TempNode = this->m_ListOfNodePointers[p_SrcSwitchId];
+        c_Node *l_TempNode = this->m_Topology->f_GetSwitchPointer(p_SrcSwitchId);
 
         cout << "Switch:" << (l_TempNode->f_GetSwitchId()) << endl;
         l_TempNode = l_TempNode->f_GetNeighbour(l_NextStepForSwitch);
