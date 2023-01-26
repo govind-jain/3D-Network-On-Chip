@@ -11,13 +11,12 @@ using namespace std;
 class c_ShortestPathRouting : virtual public c_Routing{
 
     private:
-        t_AdjacencyMatrix m_AdjacencyMatrix;
+        t_AdjacencyMatrix m_DistanceAdjacencyMatrix;
 
         t_Distance f_FindDistanceBetweenSwitches(t_SwitchId p_SwitchId1, t_SwitchId p_SwitchId2);
-        void f_SetAdjacencyMatrix();
-        t_AdjacencyMatrix f_GetAllPairsShortestPath();
+        void f_SetDistanceAdjacencyMatrix();
         t_DirectionIndex f_GetDirectionOfNeighbour(t_SwitchId p_SrcSwitch, t_SwitchId p_DestSwitch);
-        void f_SetRoutingTables();
+        void f_SetRoutingTable(t_AdjacencyMatrix p_WeightedAdjacencyMatrix);
 
     public:
         c_ShortestPathRouting(c_TopologyConfig *p_TopologyConfig);

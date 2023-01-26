@@ -15,7 +15,10 @@ class c_Routing {
 
     public:
         c_Routing(c_TopologyConfig *p_TopologyConfig);
+        c_Routing(c_Topology *p_Topology);
+        t_DirectionIndex f_GetRoute(c_Node* p_CurrSwitch, t_SwitchId p_DestSwitchId);
         void f_GetRoutingPath(t_SwitchId p_SrcSwitchId, t_SwitchId p_DestSwitchId);
+//    t_DirectionIndex f_GetRoute(t_SwitchId p_CurrSwitchId, t_SwitchId p_DestSwitchId);
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_ROUTING_H

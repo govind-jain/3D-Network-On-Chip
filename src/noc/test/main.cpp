@@ -19,10 +19,8 @@ int main() {
     c_Routing *R = new c_ShortestPathRouting(T);
     cout<<"Built Routing Tables"<<endl;
 
-    cout<<"Print Routing Path"<<endl;
     R->f_GetRoutingPath(0, 5);
     R->f_GetRoutingPath(5, 0);
-    cout<<"Printed Routing Path"<<endl;
 
     return 0;
 }

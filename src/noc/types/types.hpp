@@ -2,18 +2,18 @@
 #define INC_3D_NETWORK_ON_CHIP_TYPES_HPP
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-typedef std::string t_FileName;
-typedef std::vector<list<pair<int,int>>> t_AdjacencyList;
+typedef string t_FileName;
 typedef std::list<pair<int,int>> t_AdjacencyListOfSwitch;
+typedef std::vector<t_AdjacencyListOfSwitch> t_AdjacencyListOfSwitches;
 typedef double t_Distance;
-typedef std::vector<vector<t_Distance>> t_AdjacencyMatrix;
+typedef vector<vector<t_Distance>> t_AdjacencyMatrix;
 typedef short t_NodeType;
 typedef int t_SwitchId;
 typedef int t_Coordinate;
-typedef std::tuple<int,int,int> t_Coordinates;
+typedef std::tuple<t_Coordinate,t_Coordinate,t_Coordinate> t_Coordinates;
+typedef vector<t_Coordinates> t_CoordinatesList;
 typedef std::tuple<int,int,int> t_RepeaterId;
 typedef int t_Axis;
 typedef int t_DirectionIndex;

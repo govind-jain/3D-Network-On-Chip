@@ -6,14 +6,14 @@
 
 class c_TopologyConfig{
 private:
-    int m_NumberOfNodes;
-    vector<t_Coordinates> m_CoordinatesList;
-    t_AdjacencyList m_AdjacencyList;
+    int m_NumberOfSwitches;
+    t_CoordinatesList m_CoordinatesListOfSwitches;
+    t_AdjacencyListOfSwitches m_AdjacencyListOfSwitches;
 public:
     void f_SetTopologyFromInput();
-    t_AdjacencyList f_GetAdjacencyList();
-    vector<t_Coordinates> f_GetCoordinatesList();
-    int f_GetNumberOfNodes();
+    t_AdjacencyListOfSwitches f_GetAdjacencyListOfSwitches();
+    t_CoordinatesList f_GetCoordinatesListOfSwitches();
+    int f_GetNumberOfSwitches();
 };
 
 #endif //INC_3D_NETWORK_ON_CHIP_TOPOLOGY_CONFIG_HPP
