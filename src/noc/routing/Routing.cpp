@@ -2,9 +2,9 @@
 using namespace std;
 
 c_Routing::c_Routing(c_TopologyConfig *p_TopologyConfig) {
-    cout << "(Debug): Called constructor for c_Topology" << endl;
+//    cout << "(Debug): Called constructor for c_Topology" << endl;
     this->m_Topology = new c_Topology(p_TopologyConfig);
-    cout << "(Debug): Completed calling constructor for c_Topology" << endl;
+//    cout << "(Debug): Completed calling constructor for c_Topology" << endl;
 }
 
 c_Routing::c_Routing(c_Topology *p_Topology) {

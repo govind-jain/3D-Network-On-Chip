@@ -48,8 +48,6 @@ void c_Topology::f_SetConnections(t_AdjacencyListOfSwitches p_AdjacencyListOfSwi
             int l_NumberOfIntermediateRepeaters = l_NeighbourOfSrcSwitch.second;
             t_Axis l_AxisOfDifference = this->f_GetAxisOfDifferenceOfSwitches(l_SrcSwitchId, l_DestSwitchId);
 
-            cout << "(Debug): Connecting " << l_SrcSwitchId << " and " << l_DestSwitchId << endl;
-
             c_Node *o_PrevNode = m_ListOfSwitchPointers[l_SrcSwitchId];
 
             for (int l_RepeaterCounter = 0; l_RepeaterCounter < l_NumberOfIntermediateRepeaters; ++l_RepeaterCounter) {
@@ -90,7 +88,6 @@ c_Topology::c_Topology(c_TopologyConfig *p_TopologyConfig) {
     f_SetCoordinatesOfSwitches(p_TopologyConfig->f_GetCoordinatesListOfSwitches());
     f_SetConnections(p_TopologyConfig->f_GetAdjacencyListOfSwitches());
 
-    cout << "(Debug) " << "c_Topology Object Created Successfully." << endl;
 }
 
 c_Node* c_Topology::f_GetSwitchPointer(t_SwitchId p_SwitchId){

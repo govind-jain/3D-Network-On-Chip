@@ -54,7 +54,6 @@ void c_TopologyConfig::f_SetTopologyFromInput() {
     this->m_CoordinatesListOfSwitches = get<1>(l_InputReadings);
     this->m_AdjacencyListOfSwitches = get<2>(l_InputReadings);
 
-    cout << "(Debug): Topology has " << (this->m_NumberOfSwitches) << " switches." << endl;
 }
 
 t_AdjacencyListOfSwitches c_TopologyConfig::f_GetAdjacencyListOfSwitches() {
